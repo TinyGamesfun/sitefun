@@ -1,0 +1,78 @@
+backend:
+  # Use netlify identity as backend
+  name: github
+  repo: TinyGamesfun/sitefun
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/eleventy-starter
+media_folder: "src/static/media"
+public_folder: "/static/media"
+media_library:
+  max_file_size: 30000000
+  folder_support: true
+
+# Please run "npx @staticcms/proxy-server" for local backend
+local_backend: false
+# publish_mode: editorial_workflow
+collections:
+  - label: "Games"
+    name: "games"
+    folder: "src/games"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Video", name: "video", widget: "file", required: false }
+      - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+      - { label: "Android URL", name: "android", widget: "string", required: false }
+      - { label: "Apple URL", name: "ios", widget: "string", required: false }
+      - { label: "Web URL", name: "web", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }    
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: Site Name, name: sitename, widget: string }
+          - { label: Slogan, name: slogan, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Keywords, name: keywords, widget: string }
+      - label: "Social"
+        name: "links"
+        file: "src/_data/sociallinks.yaml"
+        fields:
+          - label: Social Links
+            name: links
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: SVG, name: svg, widget: string }
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Terms & Privacy"
+        name: "privacy"
+        file: "src/privacy.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Body", name: "body", widget: "markdown" }
