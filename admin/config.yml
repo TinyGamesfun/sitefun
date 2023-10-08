@@ -2,9 +2,6 @@ backend:
   # Use netlify identity as backend
   name: github
   repo: TinyGamesfun/sitefun
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/eleventy-starter
 media_folder: "src/static/media"
 public_folder: "/static/media"
 media_library:
@@ -12,7 +9,7 @@ media_library:
   folder_support: true
 
 # Please run "npx @staticcms/proxy-server" for local backend
-local_backend: false
+local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Games"
@@ -23,13 +20,13 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Video", name: "video", widget: "file", required: false }
       - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
-      - { label: "Android URL", name: "android", widget: "string", required: false }
+      - { label: "Android URL", name: "android", widget: "string", default: "https://play.google.com/store/apps/dev?id=5351020378119694682", required: false }
       - { label: "Apple URL", name: "ios", widget: "string", required: false }
-      - { label: "Web URL", name: "web", widget: "string", required: false }
+      - { label: "Web URL", name: "web", widget: "string", default: "https://tinygames.fun", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }    
   - label: "Settings"
     name: "settings"
