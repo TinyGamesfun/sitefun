@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fun.tinygames.streetball",
+      "sha256_cert_fingerprints": [
+        "94:C7:EF:1D:BB:18:C3:24:9B:84:F1:9E:F1:9E:23:44:08:20:33:FC:B6:D1:E3:D3:0A:9C:12:83:73:F7:4B:D6"
+      ]
+    }
+  }
+]
