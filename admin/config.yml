@@ -1,7 +1,7 @@
 backend:
   # Use netlify identity as backend
   name: github
-  repo: TinyGamesfun/_site
+  repo: TinyGamesfun/sitefun
 media_folder: "src/static/media"
 public_folder: "/static/media"
 media_library:
@@ -9,7 +9,7 @@ media_library:
   folder_support: true
 
 # Please run "npx @staticcms/proxy-server" for local backend
-#local_backend: true
+local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Games"
@@ -18,7 +18,10 @@ collections:
     create: true
     editor:
       preview: false
+    identifier_field: myslug 
+    slug: "{{fields.myslug}}" 
     fields:
+      - { label: "Page URL", name: "myslug", widget: "string", required: true }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Icon", name: "icon", widget: "image" }

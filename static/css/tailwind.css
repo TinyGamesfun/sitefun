@@ -1,0 +1,55 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.nav-shadow{
+filter:drop-shadow(0 0 4px rgb(0 0 0 / 0.2));
+}
+.media-landscape-left{
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: perspective(888px) rotateY(20deg) rotateX(15deg);
+    filter: drop-shadow(-7px 2px 0 #333399) drop-shadow(-2px 2px 4px rgb(0 0 0 / 0.3));
+}
+.media-landscape-right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: perspective(888px) rotateY(-30deg) rotateX(15deg);
+    filter: drop-shadow(7px 2px 0 #333399) drop-shadow(2px 2px 4px rgb(0 0 0 / 0.3));;
+}
+
+.media-portrait-left{
+    position: relative;
+    display: flex;
+    justify-content: center;
+   transform: perspective(888px) rotateY(20deg) rotateX(15deg);
+    filter: drop-shadow(-7px 2px 0 #333399) drop-shadow(-2px 2px 4px rgb(0 0 0 / 0.3));
+}
+.media-portrait-right{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: perspective(888px) rotateY(-20deg) rotateX(15deg);
+    filter: drop-shadow(7px 2px 0 #333399) drop-shadow(2px 2px 4px rgb(0 0 0 / 0.3));
+}
+
+.media-landscape{
+padding:10%;
+width: 100%;
+}
+.media-portrait{
+    padding:10%;
+    height: 100%;
+    }
+.frame-landscape{
+    position: absolute;
+    width: 100%;
+}
+
+.frame-portrait{
+    position: absolute;
+    height: 100%;
+}
