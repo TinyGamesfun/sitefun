@@ -1,5 +1,5 @@
 google.com, pub-9528170391306990, DIRECT, f08c47fec0942fa0
-facebook.com, 734431788108067, RESELLER, c3e20eee3f780d68
+facebook.com, 734431788108067, DIRECT, c3e20eee3f780d68
 152media.info, 152M312, RESELLER, 
 Adform.com, 2742, RESELLER, 
 Pubmatic.com, 162882, RESELLER, 5d62403b186f2ace
