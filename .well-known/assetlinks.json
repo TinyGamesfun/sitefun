@@ -10,5 +10,17 @@
         "94:C7:EF:1D:BB:18:C3:24:9B:84:F1:9E:F1:9E:23:44:08:20:33:FC:B6:D1:E3:D3:0A:9C:12:83:73:F7:4B:D6"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fun.tinygames.basketball",
+      "sha256_cert_fingerprints": [
+        "2E:92:5E:81:ED:CC:0A:88:AD:1A:95:D0:BE:F1:33:6A:2C:92:D0:01:E9:FD:59:0C:80:D9:57:EB:21:54:4B:96"
+      ]
+    }
   }
 ]
